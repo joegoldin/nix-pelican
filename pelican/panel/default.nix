@@ -34,7 +34,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     composerNoScripts = true;
     composerStrictValidation = true;
     strictDeps = true;
-    vendorHash = "sha256-VLero9gHqkh6svauRSwZf2ASpEBu9iQcPUx+J77SR+o=";
+    vendorHash = "sha256-C2KEUnaaEOpZcBDaFPr1eqZ/koHZM6CnHVZGtUnfksU=";
   };
 
   offlineCache = fetchYarnDeps {
