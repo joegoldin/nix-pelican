@@ -14,7 +14,7 @@ buildGoModule (finalAttrs: {
     hash = "sha256-CVH3oiqDa/kLEstvLwO45/jetKI/V1wlrXK1C+CVzgs=";
   };
 
-  vendorHash = lib.fakeHash; # Update after first build attempt
+  vendorHash = "sha256-Nkz9qz8rh+1dO9lGrTLLO0mOXLtcQmxi1R1jGxWiKic=";
 
   ldflags = [
     "-s"
