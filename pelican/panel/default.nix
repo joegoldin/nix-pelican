@@ -34,7 +34,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     composerNoScripts = true;
     composerStrictValidation = true;
     strictDeps = true;
-    vendorHash = lib.fakeHash; # Update after first build attempt
+    vendorHash = "sha256-VLero9gHqkh6svauRSwZf2ASpEBu9iQcPUx+J77SR+o=";
   };
 
   offlineCache = fetchYarnDeps {
