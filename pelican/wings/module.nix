@@ -53,6 +53,7 @@ let
     };
     remote = cfg.remote;
     ignore_panel_config_updates = true;
+    allowed_mounts = cfg.allowedMounts;
   };
 
   setupScript = pkgs.writeShellApplication {
@@ -87,7 +88,7 @@ let
       cfg.logDir
       cfg.tmpDir
       cfg.runDir
-    ];
+    ] ++ cfg.allowedMounts;
   };
 in
 {
@@ -187,6 +188,13 @@ in
     remote = lib.mkOption {
       type = lib.types.str;
       description = "The URL of the panel to connect to";
+    };
+
+    allowedMounts = lib.mkOption {
+      type = lib.types.listOf lib.types.path;
+      default = [ ];
+      description = "List of directories on the host that can be mounted into server containers";
+      example = [ "/var/lib/pelican/mounts" ];
     };
 
     api = {
